@@ -1,0 +1,33 @@
+[27-Oct-2017 04:03:35 UTC] PHP Parse error:  syntax error, unexpected '"', expecting ',' or ';' in /home/lensadat/public_html/application/views/edit_berita.php on line 187
+[27-Oct-2017 04:04:06 UTC] PHP Parse error:  syntax error, unexpected '"', expecting ',' or ';' in /home/lensadat/public_html/application/views/edit_berita.php on line 187
+[27-Oct-2017 04:04:07 UTC] PHP Parse error:  syntax error, unexpected '"', expecting ',' or ';' in /home/lensadat/public_html/application/views/edit_berita.php on line 187
+[27-Oct-2017 05:41:25 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/lensadat/public_html/application/controllers/Berita.php on line 255
+[30-Oct-2017 04:47:31 UTC] PHP Fatal error:  Call to undefined method M_berita::get_all_sub_topik() in /home/lensadat/public_html/application/controllers/Dashboard.php on line 113
+[30-Oct-2017 04:47:33 UTC] PHP Fatal error:  Call to undefined method M_berita::get_all_sub_topik() in /home/lensadat/public_html/application/controllers/Dashboard.php on line 113
+[30-Oct-2017 04:47:56 UTC] PHP Fatal error:  Call to undefined method M_berita::get_all_sub_topik() in /home/lensadat/public_html/application/controllers/Dashboard.php on line 113
+[30-Oct-2017 04:47:58 UTC] PHP Fatal error:  Call to undefined method M_berita::get_all_sub_topik() in /home/lensadat/public_html/application/controllers/Dashboard.php on line 113
+[30-Oct-2017 04:48:01 UTC] PHP Fatal error:  Call to undefined method M_berita::get_all_sub_topik() in /home/lensadat/public_html/application/controllers/Dashboard.php on line 113
+[30-Oct-2017 04:48:08 UTC] PHP Fatal error:  Call to undefined method M_berita::get_all_sub_topik() in /home/lensadat/public_html/application/controllers/Dashboard.php on line 113
+[01-Nov-2017 23:25:14 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/lensadat/public_html/system/libraries/Session/drivers/Session_files_driver.php on line 263
+[01-Nov-2017 23:27:01 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/lensadat/public_html/system/libraries/Session/drivers/Session_files_driver.php on line 263
+[01-Nov-2017 23:30:30 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/lensadat/public_html/system/libraries/Session/drivers/Session_files_driver.php on line 263
+[01-Nov-2017 23:31:34 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/lensadat/public_html/system/libraries/Session/drivers/Session_files_driver.php on line 263
+[01-Nov-2017 23:32:35 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/lensadat/public_html/system/libraries/Session/drivers/Session_files_driver.php on line 263
+[01-Nov-2017 23:33:35 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/lensadat/public_html/system/libraries/Session/drivers/Session_files_driver.php on line 263
+[01-Nov-2017 23:34:35 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/lensadat/public_html/system/libraries/Session/drivers/Session_files_driver.php on line 263
+[01-Nov-2017 23:35:37 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/lensadat/public_html/system/libraries/Session/drivers/Session_files_driver.php on line 263
+[01-Nov-2017 23:36:39 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/lensadat/public_html/system/libraries/Session/drivers/Session_files_driver.php on line 263
+[01-Nov-2017 23:37:40 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/lensadat/public_html/system/libraries/Session/drivers/Session_files_driver.php on line 263
+[01-Nov-2017 23:38:40 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/lensadat/public_html/system/libraries/Session/drivers/Session_files_driver.php on line 263
+[01-Nov-2017 23:39:40 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/lensadat/public_html/system/libraries/Session/drivers/Session_files_driver.php on line 263
+[01-Nov-2017 23:40:42 UTC] PHP Fatal error:  [07-Nov-2017 01:37:57 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/lensadat/public_html/application/views/tone/lib/PHPInsight/Sentiment.php on line 163
+[07-Nov-2017 01:39:05 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/lensadat/public_html/application/views/tone/lib/PHPInsight/Sentiment.php on line 163
+[07-Nov-2017 02:29:35 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/lensadat/public_html/application/views/tone/lib/PHPInsight/Sentiment.php on line 163
+[17-Dec-2017 22:03:53 UTC] PHP Fatal error:  Call to a member function row() on a non-object in /home/lensadat/public_html/application/controllers/Berita.php on line 166
+[18-Dec-2017 14:12:54 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/lensadat/public_html/application/models/M_trend.php on line 28
+[18-Dec-2017 14:13:01 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/lensadat/public_html/application/models/M_trend.php on line 28
+[21-Dec-2017 01:53:57 UTC] PHP Parse error:  syntax error, unexpected 'email' (T_STRING), expecting ']' in /home/lensadat/public_html/application/controllers/Email.php on line 44
+[21-Dec-2017 01:54:25 UTC] PHP Parse error:  syntax error, unexpected 'email' (T_STRING), expecting ']' in /home/lensadat/public_html/application/controllers/Email.php on line 44
+[21-Dec-2017 01:54:42 UTC] PHP Parse error:  syntax error, unexpected 'email' (T_STRING), expecting ']' in /home/lensadat/public_html/application/controllers/Email.php on line 44
+[21-Dec-2017 01:54:47 UTC] PHP Parse error:  syntax error, unexpected 'email' (T_STRING), expecting ']' in /home/lensadat/public_html/application/controllers/Email.php on line 44
+[05-Jan-2018 14:50:30 UTC] PHP Fatal error:  Call to undefined method M_berita::get_berita_hari_ini_tone() in /home/lensadat/public_html/application/controllers/Berita.php on line 142

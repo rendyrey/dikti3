@@ -1,0 +1,7 @@
+[11-Oct-2017 06:58:55 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/lensadat/public_html/kominfo/conn.php on line 9
+[11-Oct-2017 06:59:12 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'lensadata_root'@'sage.dnsbit.net' (using password: YES) in /home/lensadat/public_html/kominfo/conn.php on line 8
+[11-Oct-2017 06:59:14 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'lensadata_root'@'sage.dnsbit.net' (using password: YES) in /home/lensadat/public_html/kominfo/conn.php on line 8
+[11-Oct-2017 06:59:34 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'lensadata_root'@'sage.dnsbit.net' (using password: YES) in /home/lensadat/public_html/kominfo/conn.php on line 8
+[11-Oct-2017 06:59:36 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'lensadata_root'@'sage.dnsbit.net' (using password: YES) in /home/lensadat/public_html/kominfo/conn.php on line 8
+[11-Oct-2017 06:59:48 UTC] PHP Warning:  mysqli_connect(): (HY000/1044): Access denied for user 'lensadat_root'@'103.8.79.214' to database 'pendaftaran' in /home/lensadat/public_html/kominfo/conn.php on line 8
+[11-Oct-2017 06:59:50 UTC] PHP Warning:  mysqli_connect(): (HY000/1044): Access denied for user 'lensadat_root'@'103.8.79.214' to database 'pendaftaran' in /home/lensadat/public_html/kominfo/conn.php on line 8

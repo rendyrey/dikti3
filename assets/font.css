@@ -1,0 +1,16 @@
+@font-face {
+font-family: Roboto;
+src: url('<?php echo base_url();?>assets/Roboto-Regular.ttf');
+}
+
+html {
+font-family: Roboto !important;
+}
+
+body{
+font-family: Roboto !important;
+}
+
+div{
+font-family: Roboto !important;
+}

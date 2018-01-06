@@ -1,0 +1,2 @@
+[14-Dec-2017 13:21:36 UTC] PHP Warning:  file_get_contents(https://www.cnnindonesia.com/nasional/indeks/3): failed to open stream: HTTP request failed!  in /home/lensadat/public_html/assets/simple_html_dom.php on line 1097
+[14-Dec-2017 13:21:36 UTC] PHP Fatal error:  Call to a member function find() on a non-object in /home/lensadat/public_html/assets/simple_html_dom.php on line 1129
