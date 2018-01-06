@@ -10,7 +10,7 @@ class M_dashboard extends CI_Model{
   }
 
   function get_netral_today(){
-  
+
     if(date('H:i') < "09:30"){
      		$this->db->where('tgl_post >=',date('Y-m-d H:i',strtotime("yesterday 17:00")));
      		//$this->db->where('tgl_berita',date('Y-m-d'));
@@ -21,7 +21,7 @@ class M_dashboard extends CI_Model{
     return $this->db->get('isi_berita');
   }
   function get_positif_today(){
-    
+
    if(date('H:i') < "09:30"){
      		$this->db->where('tgl_post >=',date('Y-m-d H:i',strtotime("yesterday 17:00")));
      		//$this->db->where('tgl_berita',date('Y-m-d'));
@@ -33,7 +33,7 @@ class M_dashboard extends CI_Model{
   }
 
   function get_negatif_today(){
-   
+
     if(date('H:i') < "09:30"){
      		$this->db->where('tgl_post >=',date('Y-m-d H:i',strtotime("yesterday 17:00")));
      		//$this->db->where('tgl_berita',date('Y-m-d'));
@@ -42,6 +42,32 @@ class M_dashboard extends CI_Model{
      		}
     $this->db->where('tone_berita','-1');
     return $this->db->get('isi_berita');
+  }
+
+  function get_kemenristekdikti_today(){
+    if(date('H:i') < "09:30"){
+     		$this->db->where('tgl_post >=',date('Y-m-d H:i',strtotime("yesterday 17:00")));
+     		//$this->db->where('tgl_berita',date('Y-m-d'));
+     		}else{
+     		$this->db->where('tgl_berita',date('Y-m-d'));
+     		}
+    $this->db->where('jenis_berita = "Kemenristekdikti"');
+    $this->db->order_by('tgl_post', 'desc');
+    return $this->db->get('isi_berita')
+
+  }
+
+  function get_nonkemenristekdikti_today(){
+    if(date('H:i') < "09:30"){
+        $this->db->where('tgl_post >=',date('Y-m-d H:i',strtotime("yesterday 17:00")));
+        //$this->db->where('tgl_berita',date('Y-m-d'));
+        }else{
+        $this->db->where('tgl_berita',date('Y-m-d'));
+        }
+    $this->db->where('jenis_berita = "Non-Kemenristekdikti"');
+    $this->db->order_by('tgl_post', 'desc');
+    return $this->db->get('isi_berita')
+
   }
 
 }

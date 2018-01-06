@@ -396,8 +396,8 @@ ade<!DOCTYPE html>
 
           </div><!-- col-md-12 -->
           <div class="col-md-6">
-          <h3>Berita Hari Ini</h3>
-          <div style="height:300px;width:auto;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;background-color:white;">
+          <h3>Berita Kemenristekdikti</h3>
+          <div style="height:350px;width:auto;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;background-color:white;">
 
             <?php
             if($jml_berita_today!=0){
@@ -429,7 +429,7 @@ ade<!DOCTYPE html>
 
         <div class="col-md-6">
           <h3>Trending Berita</h3>
-          <div style="height:300px;width:auto;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;background-color:white;">
+          <div style="height:350px;width:auto;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;background-color:white;">
             <?php
             if($jml_berita_today!=0){
 
@@ -455,9 +455,41 @@ ade<!DOCTYPE html>
 
           </div>
         </div>
+
+        <div class="col-md-6">
+          <h3>Berita Non-Kemenristekdikti</h3>
+          <div style="height:350px;width:auto;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;background-color:white;">
+
+            <?php
+            if($jml_berita_today!=0){
+              for($i=0;$i<$jml_berita_today;$i++){
+
+                $tgl_news = date('D, j F Y',strtotime($tgl_berita[$i]));
+                ?>
+                <div class="panel">
+                  <div class="panel-heading">
+                    <h5 class="panel-title"><i class="fa fa-clock-o"></i>&nbsp;&nbsp;<?=$tgl_news;?></h4>
+                  </div>
+                  <div class="panel-body">
+                  <a href='<?php echo site_url('Berita/detail/').$id_isi_berita[$i];?>' target='_blank'><?=$judul_berita[$i];?></a>
+                  </div>
+                </div>
+                <hr>
+                <?php
+              }
+
+
+            }else{
+              echo "<br><br>";
+              echo "<center><h4>Belum ada berita</h4></center>";
+            }
+            ?>
+          </div>
+        </div>
+
         <div class="col-md-6">
           <h3>Trending Berita</h3>
-          <div style="height:300px;width:500px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;background-color:white;">
+          <div style="height:350px;width:auto;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;background-color:white;">
             <?php
             if($jml_berita_today!=0){
 
@@ -483,7 +515,7 @@ ade<!DOCTYPE html>
 
           </div>
         </div>
-      </div>
+
 
 
       </div><!-- contentpanel -->
