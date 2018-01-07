@@ -58,8 +58,8 @@ class Dashboard extends CI_Controller {
 			}
 
 
-			//untuk berita hari ini
-			$berita_today = $this->M_berita->get_berita_hari_ini();
+			//untuk berita hari ini kemenristekdikti
+			$berita_today = $this->M_dashboard->get_kemenristekdikti_today();
 			$data['jml_berita_today'] = $berita_today->num_rows();
 			foreach($berita_today->result() as $value){
 				$data['judul_berita'][] = $value->judul;
@@ -67,8 +67,8 @@ class Dashboard extends CI_Controller {
 				$data['tgl_berita'][] = $value->tgl_berita;
 			}
 
-			//untuk trend
-			$query = $this->M_trend->get_all_sort_day();
+			//untuk trend hari ini kemenristekdikti
+			$query = $this->M_trend->get_all_sort_day_kemenristekdikti();
 			$data['jml_trend'] = $query->num_rows();
 			$i=0;
 			foreach($query->result() as $row){
@@ -76,6 +76,27 @@ class Dashboard extends CI_Controller {
 				$data['topik_trend'][$i] = $row->nama_sub_topik;
 				$data['id_sub_topik'][$i] = $row->id_sub_topik;
 				$data['id_berita'][$i] = $row->id_berita;
+				$i++;
+			}
+
+			//untuk berita hari ini non-kemenristekdikti
+			$berita_today = $this->M_dashboard->get_nonkemenristekdikti_today();
+			$data['jml_berita_today_non'] = $berita_today->num_rows();
+			foreach($berita_today->result() as $value){
+				$data['judul_berita_non'][] = $value->judul;
+				$data['id_isi_berita_non'][] = $value->id_isi_berita;
+				$data['tgl_berita_non'][] = $value->tgl_berita;
+			}
+
+			//untuk trend hari ini non-kemenristekdikti
+			$query = $this->M_trend->get_all_sort_day_nonkemenristekdikti();
+			$data['jml_trend_non'] = $query->num_rows();
+			$i=0;
+			foreach($query->result() as $row){
+				$data['total_trend_non'][$i] = $row->total;
+				$data['topik_trend_non'][$i] = $row->nama_sub_topik;
+				$data['id_sub_topik_non'][$i] = $row->id_sub_topik;
+				$data['id_berita_non'][$i] = $row->id_berita;
 				$i++;
 			}
 			$this->load->view('dashboard',$data);

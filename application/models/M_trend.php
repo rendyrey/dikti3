@@ -21,7 +21,7 @@ class M_trend extends CI_Model {
     // return $this->db->query('select topik_berita,count(isi_berita.id_berita) as total from isi_berita,topik_berita where isi_berita.id_berita=topik_berita.id_berita GROUP BY isi_berita.id_berita order by total DESC');
   }
 
-	function get_all_sort_day(){
+	function get_all_sort_day_kemenristekdikti(){
 		$this->db->select('nama_sub_topik,isi_berita.id_berita as id_berita,isi_berita.id_sub_topik,count(isi_berita.id_sub_topik) as total');
 		$this->db->from('isi_berita,sub_topik_berita');
 		if(date('H:i') <= "09:30"){
@@ -30,8 +30,27 @@ class M_trend extends CI_Model {
 		}else{
 		$this->db->where('tgl_berita',date('Y-m-d'));
 		}
-		
+
 		$this->db->where('isi_berita.id_sub_topik=sub_topik_berita.id_sub_topik');
+		$this->db->where('jenis_berita = "Kemenristekdikti"');
+		$this->db->group_by('isi_berita.id_sub_topik');
+		$this->db->order_by('total', 'desc');
+		$this->db->limit(10);
+		return $this->db->get();
+	}
+
+	function get_all_sort_day_nonkemenristekdikti(){
+		$this->db->select('nama_sub_topik,isi_berita.id_berita as id_berita,isi_berita.id_sub_topik,count(isi_berita.id_sub_topik) as total');
+		$this->db->from('isi_berita,sub_topik_berita');
+		if(date('H:i') <= "09:30"){
+		$this->db->where('tgl_post >=',strtotime("yesterday 17:00"));
+		$this->db->where('tgl_berita',date('Y-m-d'));
+		}else{
+		$this->db->where('tgl_berita',date('Y-m-d'));
+		}
+
+		$this->db->where('isi_berita.id_sub_topik=sub_topik_berita.id_sub_topik');
+		$this->db->where('jenis_berita = "Non-Kemenristekdikti"');
 		$this->db->group_by('isi_berita.id_sub_topik');
 		$this->db->order_by('total', 'desc');
 		$this->db->limit(10);

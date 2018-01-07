@@ -428,7 +428,7 @@ ade<!DOCTYPE html>
         </div><!-- row -->
 
         <div class="col-md-6">
-          <h3>Trending Berita</h3>
+          <h3>Trending Berita Kemenristekdikti</h3>
           <div style="height:350px;width:auto;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;background-color:white;">
             <?php
             if($jml_berita_today!=0){
@@ -461,17 +461,17 @@ ade<!DOCTYPE html>
           <div style="height:350px;width:auto;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;background-color:white;">
 
             <?php
-            if($jml_berita_today!=0){
-              for($i=0;$i<$jml_berita_today;$i++){
+            if($jml_berita_today_non!=0){
+              for($i=0;$i<$jml_berita_today_non;$i++){
 
-                $tgl_news = date('D, j F Y',strtotime($tgl_berita[$i]));
+                $tgl_news_non = date('D, j F Y',strtotime($tgl_berita_non[$i]));
                 ?>
                 <div class="panel">
                   <div class="panel-heading">
-                    <h5 class="panel-title"><i class="fa fa-clock-o"></i>&nbsp;&nbsp;<?=$tgl_news;?></h4>
+                    <h5 class="panel-title"><i class="fa fa-clock-o"></i>&nbsp;&nbsp;<?=$tgl_news_non;?></h4>
                   </div>
                   <div class="panel-body">
-                  <a href='<?php echo site_url('Berita/detail/').$id_isi_berita[$i];?>' target='_blank'><?=$judul_berita[$i];?></a>
+                  <a href='<?php echo site_url('Berita/detail/').$id_isi_berita_non[$i];?>' target='_blank'><?=$judul_berita_non[$i];?></a>
                   </div>
                 </div>
                 <hr>
@@ -488,19 +488,19 @@ ade<!DOCTYPE html>
         </div>
 
         <div class="col-md-6">
-          <h3>Trending Berita</h3>
+          <h3>Trending Berita Non-Kemenristekdikti</h3>
           <div style="height:350px;width:auto;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;background-color:white;">
             <?php
-            if($jml_berita_today!=0){
+            if($jml_berita_today_non!=0){
 
-              for($i=0;$i<$jml_trend;$i++){
+              for($i=0;$i<$jml_trend_non;$i++){
 
                 $j=$i+1;
                 ?>
                 <div class="panel" style='height:30px;padding:0;'>
                   <div class="panel-body" style='height:30px;'>
-                    <a href='<?=site_url('Berita/berita_trend/').$id_berita[$i]."/".$id_sub_topik[$i]?>'>
-                  <?="#".$j."  ".$topik_trend[$i];?>
+                    <a href='<?=site_url('Berita/berita_trend/').$id_berita_non[$i]."/".$id_sub_topik_non[$i]?>'>
+                  <?="#".$j."  ".$topik_trend_non[$i];?>
                 </a>
                   </div>
                 </div>

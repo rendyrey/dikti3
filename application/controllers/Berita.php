@@ -508,7 +508,7 @@ public function detail($id_isi_berita){
     $news=str_replace('.','',$_POST['news_value']);
     $data['ad_value'] = $ad;
     $data['news_value'] = $news;
-    $data['link_berita'] = $_POST['link_berita'];
+    
 
     $id_berita = $data['id_berita'];
     $this->M_berita->update_isi_berita($id_isi_berita,$data);

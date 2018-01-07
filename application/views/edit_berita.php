@@ -185,7 +185,7 @@
             <strong><?php echo $message;?></strong>
           </div>
         <?php }?>
-        <form action="<?php echo site_url('Berita/edit_berita')."/$id_isi_berita"; ?>" method=post id='form_berita'>
+        <form action="<?php echo site_url('Berita/edit_berita')."/$id_isi_berita"; ?>" method=post id='form_berita' enctype="multipart/form-data">
           Jenis Berita:
           <?php
           if($jenis_berita=="Kemenristekdikti"){
@@ -555,7 +555,7 @@ $(function(){
     $.ajax({
       type: "POST",
       dataType: "html",
-      url: "http://localhost/dikti3/index.php/Narasumber/get/",
+      url: "http://lensadata.id/index.php/Narasumber/get/",
       data: "id_narasumber="+id_narasumber,
       success: function(data){
         // alert("hello wordl");
@@ -578,7 +578,7 @@ $(function(){
     $.ajax({
       type: "POST",
       dataType: "html",
-      url: "http://localhost/dikti3/index.php/Narasumber/get/",
+      url: "http://lensadata.id/index.php/Narasumber/get/",
       data: "id_narasumber="+id_narasumber,
       success: function(data){
         // alert("hello wordl");
@@ -601,7 +601,7 @@ $(function(){
     $.ajax({
       type: "POST",
       dataType: "html",
-      url: "http://localhost/dikti3/index.php/Narasumber/get/",
+      url: "http://lensadata.id/index.php/Narasumber/get/",
       data: "id_narasumber="+id_narasumber,
       success: function(data){
         // alert("hello wordl");
@@ -624,7 +624,7 @@ $(function(){
     $.ajax({
       type: "POST",
       dataType: "html",
-      url: "http://localhost/dikti3/index.php/Narasumber/get/",
+      url: "http://lensadata.id/index.php/Narasumber/get/",
       data: "id_narasumber="+id_narasumber,
       success: function(data){
         // alert("hello wordl");
@@ -647,7 +647,7 @@ $(function(){
     $.ajax({
       type: "POST",
       dataType: "html",
-      url: "http://localhost/dikti3/index.php/Berita/get_topik/",
+      url: "http://lensadata.id/index.php/Berita/get_topik/",
       data: "id_sub_topik="+id_sub_topik,
       success: function(data){
         // alert("hello wordl");

@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
-	'database' => 'dikti',
+	'hostname' => 'lensadata.id',
+	'username' => 'lensadat_root',
+	'password' => 'lensadata246',
+	'database' => 'lensadat_dikti',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

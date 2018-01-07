@@ -219,7 +219,7 @@ img.g-img + div {
     <table role="presentation" cellspacing="0" cellpadding="5" align="center" width="600" style="margin: auto;font-family: sans-serif;" class="email-container">
       <tr style="border:2px solid black;">
         <td bgcolor="#fff" align="center" colspan='3'>
-          Report Overview
+          Report Overview (Kemenristekdikti)
         </td>
       </tr>
       <tr bgcolor="#B8B8B8" align="center" style="border:2px solid black;">
@@ -399,6 +399,194 @@ img.g-img + div {
 
   </table>
   <!-- Email Body : END -->
+
+  <!-- Email Header : BEGIN -->
+  <br>
+  <br>
+  <br>
+  <table role="presentation" cellspacing="0" cellpadding="5" align="center" width="600" style="margin: auto;font-family: sans-serif;" class="email-container">
+    <tr style="border:2px solid black;">
+      <td bgcolor="#fff" align="center" colspan='3'>
+        Report Overview (Non-Kemenristekdikti)
+      </td>
+    </tr>
+    <tr bgcolor="#B8B8B8" align="center" style="border:2px solid black;">
+      <td style="border:2px solid black;background-color:#90EE90;">Positive</td>
+      <td style="border:2px solid black;background-color:#F08080;">Negative</td>
+      <td style="border:2px solid black;">Neutral</td>
+    </tr>
+    <tr bgcolor="#fff" align="center">
+      <td style="border:2px solid black;"><?=$positif_non;?></td>
+      <td style="border:2px solid black;"><?=$negatif_non;?></td>
+      <td style="border:2px solid black;"><?=$netral_non;?></td>
+    </tr>
+  </table>
+  <!-- Email Header : END -->
+
+  <!-- Email Body : BEGIN -->
+  <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="margin: auto;" class="email-container">
+
+    <!-- Hero Image, Flush : BEGIN -->
+
+    <!-- Hero Image, Flush : END -->
+
+    <!-- 1 Column Text + Button : BEGIN -->
+
+
+
+    <!-- 1 Column Text + Button : END -->
+
+    <!-- Background Image with Text : BEGIN -->
+    <tr>
+      <!-- Bulletproof Background Images c/o https://backgrounds.cm -->
+      <td bgcolor="#222222" valign="middle" style="text-align: center; background-position: center center !important; background-size: cover !important;">
+        <!--[if gte mso 9]>
+        <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;height:175px; background-position: center center !important;">
+        <v:fill type="tile" src="http://placehold.it/600x230/222222/666666" color="#222222" />
+        <v:textbox inset="0,0,0,0">
+        <![endif]-->
+        <div>
+          <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+              <td valign="middle" style="text-align: center; padding: 10px; font-family: sans-serif; font-size: 15px; line-height: 140%; color: #ffffff;">
+                <h3>Media Monitoring</h3>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <!--[if gte mso 9]>
+      </v:textbox>
+    </v:rect>
+    <![endif]-->
+  </td>
+</tr>
+<!-- Background Image with Text : END -->
+
+<!-- 2 Even Columns : BEGIN -->
+
+<!-- 2 Even Columns : END -->
+
+<!-- 3 Even Columns : BEGIN -->
+<tr>
+  <td bgcolor="#ffffff" align="center" valign="top" style="padding: 0px;">
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+      <?php
+      for($i=0;$i<$jml_berita_today_non;$i++){
+        $tgl_news = date('D, j F Y',strtotime($tgl_berita_non[$i]));
+        ?>
+
+        <?php
+        $j=$i+1;
+
+        ?>
+        <tr>
+          <!-- Column : BEGIN -->
+          <?php
+          if($tone_berita_non[$i]==1){
+            ?>
+            <td width="10%%" class="stack-column-center" style="vertical-align:top;background-color:#90EE90;" align="center">
+              <h5><?=$j;?></h5>
+            </td>
+            <?php
+          }else if($tone_berita_non[$i]==-1){
+            ?>
+            <td width="10%%" class="stack-column-center" style="vertical-align:top;background-color:#F08080;" align="center">
+              <h5><?=$j;?></h5>
+            </td>
+            <?php
+          }else{
+            ?>
+            <td width="10%%" class="stack-column-center" style="vertical-align:top;background-color:#B8B8B8;" align="center">
+              <h5><?=$j;?></h5>
+            </td>
+            <?php
+          }
+          ?>
+
+          <!-- Column : END -->
+          <!-- Column : BEGIN -->
+          <td width="70%" class="stack-column-center">
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+              <tr>
+
+              </tr>
+              <tr>
+                <td style="font-family: sans-serif; font-size: 12px; line-height: 140%; color: #555555; padding: 0 10px 10px; text-align: left;" class="center-on-narrow">
+                  <?php
+                  if(filter_var($link_berita_non[$i], FILTER_VALIDATE_URL))
+                  {?>
+                    <strong><a href='<?=$link_berita_non[$i];?>'><?=$judul_berita_non[$i];?></a></strong><br>
+                    <strong>Reporter: <?=$wartawan_non[$i];?> | </strong>
+                    <strong><?=$nama_media_non[$i];?></strong> |
+                    <?php echo "<a href=$link_berita_non[$i]>Link</a> | ";?>
+                    <strong><?="$tgl_news, $jam_berita_non[$i]";?></strong><br><br>
+
+                    <?php
+
+
+                    //exit; // die well
+                  }
+                  else
+                  {?>
+                    <strong><?=$judul_berita_non[$i];?></strong><br>
+                    <strong>Reporter: <?=$wartawan_non[$i];?> | </strong>
+                    <strong><?=$nama_media_non[$i];?></strong> |
+                    <?=$halaman_non[$i]." | ";?>
+                    <strong><?="$tgl_news, $jam_berita_non[$i]";?></strong><br><br>
+
+
+                    <?php
+                    // my else codes goes
+                  }
+                  $string = strip_tags($isi_berita_non[$i]);
+                  if (strlen($string) > 350) {
+                    // truncate string
+                    $stringCut = substr($string, 0, 450);
+                    // make sure it ends in a word so assassinate doesn't become ass...
+                    $string = substr($stringCut, 0, strrpos($stringCut, ' '))."...";
+                  }
+                  ?>
+
+                  <p style="margin: 0;"><?=$string;?></p>
+                </td>
+              </tr>
+            </table>
+          </td>
+          <!-- Column : END -->
+          <!-- Column : BEGIN -->
+          <td width="20%" class="stack-column-center" style="vertical-align:top">
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+              <tr>
+                <td style="padding: 10px; text-align: center">
+                  <a href="<?php echo base_url();?>assets/img_berita/<?=$gambar_non[$i]?>" style="background: #222222; border: 5px solid #222222; font-family: sans-serif; font-size: 11px; line-height: 100%; text-align: center; text-decoration: none; display: block; border-radius: 3px;" class="button-a" target="_blank">
+                    <span style="color:#ffffff;" class="button-link">&nbsp;&nbsp;&nbsp;&nbsp;Attachment&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                  </a>                                    </td>
+                </tr>
+
+              </table>
+            </td>
+            <!-- Column : END -->
+          </tr>
+        <?php }?>
+      </table>
+    </td>
+  </tr>
+  <!-- 3 Even Columns : END -->
+
+  <!-- Thumbnail Left, Text Right : BEGIN -->
+
+  <!-- Thumbnail Left, Text Right : END -->
+
+  <!-- Thumbnail Right, Text Left : BEGIN -->
+
+  <!-- Thumbnail Right, Text Left : END -->
+
+  <!-- Clear Spacer : BEGIN -->
+
+  <!-- 1 Column Text : END -->
+
+</table>
+<!-- Email Body : END -->
 
   <!-- Email Footer : BEGIN -->
   <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 680px; font-family: sans-serif; color: #888888; font-size: 12px; line-height: 140%;">

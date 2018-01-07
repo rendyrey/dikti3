@@ -1,7 +1,7 @@
 <?php
 
 // ini_set('display_errors',0);
-$koneksi = mysqli_connect("localhost","root","","dikti");
+$koneksi = mysqli_connect("lensadata.id","lensadat_root","lensadata246","lensadat_dikti");
 //ambil parameter\
 // $id_narasumber = 'NS002';
 $id_narasumber = $_POST['id_narasumber'];
@@ -26,6 +26,6 @@ $id_narasumber = $_POST['id_narasumber'];
 
           echo "<option value='SNS065'>Lainnya</option>";
 
-
+     
 
 ?>

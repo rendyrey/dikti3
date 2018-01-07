@@ -53,7 +53,7 @@ class M_dashboard extends CI_Model{
      		}
     $this->db->where('jenis_berita = "Kemenristekdikti"');
     $this->db->order_by('tgl_post', 'desc');
-    return $this->db->get('isi_berita')
+    return $this->db->get('isi_berita');
 
   }
 
@@ -66,7 +66,7 @@ class M_dashboard extends CI_Model{
         }
     $this->db->where('jenis_berita = "Non-Kemenristekdikti"');
     $this->db->order_by('tgl_post', 'desc');
-    return $this->db->get('isi_berita')
+    return $this->db->get('isi_berita');
 
   }
 
