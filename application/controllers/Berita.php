@@ -216,7 +216,7 @@ class Berita extends CI_Controller {
           $data['isi_berita'][$i] = $row3->isi_berita;
           $data['judul'][$i] = $row3->judul;
           $date_post = strtotime($row3->tgl_berita);
-          
+
             //untuk mengambil nama topik
             $data['id_sub_topik'][$i] = $row3->id_sub_topik;
           $get_name_sub = $this->M_berita->get_sub_topik_name($data['id_sub_topik'][$i])->row();
@@ -508,13 +508,13 @@ public function detail($id_isi_berita){
     $news=str_replace('.','',$_POST['news_value']);
     $data['ad_value'] = $ad;
     $data['news_value'] = $news;
-    
+
 
     $id_berita = $data['id_berita'];
     $this->M_berita->update_isi_berita($id_isi_berita,$data);
 
     $this->session->set_flashdata('message','Post Berita Berhasil!');
-    header("location:http://lensadata.id/index.php/Berita/tabel_berita/$id_berita");
+    header("location:http://localhost/dikti3/index.php/Berita/tabel_berita/$id_berita");
     // redirect('Berita/tabel_berita/');
 
   }

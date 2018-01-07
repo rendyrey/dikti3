@@ -455,7 +455,7 @@ $(function(){
     $.ajax({
       type: "POST",
       dataType: "html",
-      url: "http://lensadata.id/index.php/Narasumber/get/",
+      url: "http://localhost/dikti3/index.php/Narasumber/get/",
       data: "id_narasumber="+id_narasumber,
       success: function(data){
         // alert("hello wordl");
@@ -478,7 +478,7 @@ $(function(){
     $.ajax({
       type: "POST",
       dataType: "html",
-      url: "http://lensadata.id/index.php/Narasumber/get/",
+      url: "http://localhost/dikti3/index.php/Narasumber/get/",
       data: "id_narasumber="+id_narasumber,
       success: function(data){
         // alert("hello wordl");
@@ -501,7 +501,7 @@ $(function(){
     $.ajax({
       type: "POST",
       dataType: "html",
-      url: "http://lensadata.id/index.php/Narasumber/get/",
+      url: "http://localhost/dikti3/index.php/Narasumber/get/",
       data: "id_narasumber="+id_narasumber,
       success: function(data){
         // alert("hello wordl");
@@ -524,7 +524,7 @@ $(function(){
     $.ajax({
       type: "POST",
       dataType: "html",
-      url: "http://lensadata.id/index.php/Narasumber/get/",
+      url: "http://localhost/dikti3/index.php/Narasumber/get/",
       data: "id_narasumber="+id_narasumber,
       success: function(data){
         // alert("hello wordl");
@@ -547,7 +547,7 @@ $(function(){
     $.ajax({
       type: "POST",
       dataType: "html",
-      url: "http://lensadata.id/index.php/Berita/get_topik/",
+      url: "http://localhost/dikti3/index.php/Berita/get_topik/",
       data: "id_sub_topik="+id_sub_topik,
       success: function(data){
         // alert("hello wordl");
